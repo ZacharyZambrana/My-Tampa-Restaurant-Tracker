@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <i class="fas fa-utensils"></i> Restaurant Tracker
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li>
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li>
+                    <a href="read.html" class="navbar_links">View Restaurants</a>
+                </li>
+                <li>
+                    <a href="visualizations.html" class="navbar_links">Visualizations</a>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="mybot.html" class="button">Chat Bot</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page_title">Delete a Restaurant</h1>
+        
+        <div class="delete_wrapper">
+            <div class="restaurants_list">
+                <h2>Restaurants to Delete</h2>
+                <div class="restaurant_delete_items">
+                    <div class="delete_item">
+                        <div class="delete_item_info">
+                            <h3>Bricks of Ybor</h3>
+                            <p>Ybor City • Italian</p>
+                            <p class="rating">⭐⭐⭐⭐ (4.0)</p>
+                        </div>
+                        <button class="btn btn_delete" onclick="confirmDelete('Bricks of Ybor')">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+
+                    <div class="delete_item">
+                        <div class="delete_item_info">
+                            <h3>Impasto</h3>
+                            <p>South Tampa • Italian</p>
+                            <p class="rating">⭐⭐⭐⭐⭐ (5.0)</p>
+                        </div>
+                        <button class="btn btn_delete" onclick="confirmDelete('Impasto')">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+
+                    <div class="delete_item">
+                        <div class="delete_item_info">
+                            <h3>Salt Block</h3>
+                            <p>Hyde Park • Mediterranean</p>
+                            <p class="rating">⭐⭐⭐⭐ (4.5)</p>
+                        </div>
+                        <button class="btn btn_delete" onclick="confirmDelete('Salt Block')">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+
+                    <div class="delete_item">
+                        <div class="delete_item_info">
+                            <h3>Cafe Escada</h3>
+                            <p>Downtown Tampa • Mediterranean</p>
+                            <p class="rating">⭐⭐⭐ (3.5)</p>
+                        </div>
+                        <button class="btn btn_delete" onclick="confirmDelete('Cafe Escada')">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+
+                    <div class="delete_item">
+                        <div class="delete_item_info">
+                            <h3>Ceviche Tapas Bar</h3>
+                            <p>Ybor City • Spanish</p>
+                            <p class="rating">⭐⭐⭐⭐ (4.0)</p>
+                        </div>
+                        <button class="btn btn_delete" onclick="confirmDelete('Ceviche Tapas Bar')">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info_box">
+            <h3><i class="fas fa-warning"></i> Delete Operation</h3>
+            <p>Click the delete button next to a restaurant to remove it from your tracker. In the final dynamic version, this would permanently delete the restaurant from the database. This action cannot be undone.</p>
+        </div>
+
+        <div class="crud_actions">
+            <a href="read.html" class="btn btn_secondary">
+                <i class="fas fa-arrow-left"></i> Back to Restaurants
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <div class="footer_links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="visualizations.html">Visualizations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function confirmDelete(restaurantName) {
+            if (confirm(`Are you sure you want to delete "${restaurantName}"?\n\nThis action cannot be undone.`)) {
+                alert(`"${restaurantName}" has been deleted from your tracker.`);
+                // In the final version, this would make an API call to delete from the database
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

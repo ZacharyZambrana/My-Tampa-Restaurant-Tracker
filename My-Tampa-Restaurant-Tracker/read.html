@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Restaurants</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <i class="fas fa-utensils"></i> Restaurant Tracker
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li>
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li>
+                    <a href="read.html" class="navbar_links">View Restaurants</a>
+                </li>
+                <li>
+                    <a href="visualizations.html" class="navbar_links">Visualizations</a>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="mybot.html" class="button">Chat Bot</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page_title">View Our Restaurants</h1>
+        
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search restaurants..." class="search_input">
+            <select id="cityFilter" class="filter_select">
+                <option value="">All Cities</option>
+                <option value="Downtown Tampa">Downtown Tampa</option>
+                <option value="Hyde Park">Hyde Park</option>
+                <option value="South Tampa">South Tampa</option>
+                <option value="Ybor City">Ybor City</option>
+                <option value="New Tampa">New Tampa</option>
+            </select>
+            <select id="cuisineFilter" class="filter_select">
+                <option value="">All Cuisines</option>
+                <option value="Italian">Italian</option>
+                <option value="Asian">Asian</option>
+                <option value="Mexican">Mexican</option>
+                <option value="American">American</option>
+                <option value="Mediterranean">Mediterranean</option>
+            </select>
+        </div>
+
+        <div class="restaurants_grid" id="restaurantsContainer">
+            <!-- Restaurant cards will be populated here by JavaScript -->
+        </div>
+
+        <div class="crud_actions">
+            <a href="create.html" class="btn btn_primary">
+                <i class="fas fa-plus"></i> Add New Restaurant
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <div class="footer_links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="visualizations.html">Visualizations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

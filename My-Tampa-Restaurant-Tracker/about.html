@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <i class="fas fa-utensils"></i> Restaurant Tracker
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li>
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li>
+                    <a href="read.html" class="navbar_links">View Restaurants</a>
+                </li>
+                <li>
+                    <a href="visualizations.html" class="navbar_links">Visualizations</a>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="mybot.html" class="button">Chat Bot</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page_title">About Us</h1>
+
+        <!-- Team Section -->
+        <section class="about_section">
+            <h2>Meet the Team</h2>
+            <div class="team_grid">
+                <div class="team_member">
+                    <div class="member_avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Zach</h3>
+                    <p class="role">Project Lead & Full Stack Developer</p>
+                    <p class="contributions">
+                        Responsible for:
+                        <ul>
+                            <li>Project architecture and planning</li>
+                            <li>Frontend development</li>
+                            <li>Database design</li>
+                            <li>API development</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="team_member">
+                    <div class="member_avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Girlfriend</h3>
+                    <p class="role">Product Manager & Business Analyst</p>
+                    <p class="contributions">
+                        Responsible for:
+                        <ul>
+                            <li>User research and requirements gathering</li>
+                            <li>Product roadmap</li>
+                            <li>Testing and quality assurance</li>
+                            <li>Content and restaurant data</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Purpose -->
+        <section class="about_section">
+            <h2>Project Purpose</h2>
+            <p>The My Tampa Restaurant Tracker is designed to help couples and friends remember and review restaurants they've visited together. With features to organize restaurants by city, cuisine, rating, and price range, users can easily track their dining experiences and share recommendations.</p>
+        </section>
+
+        <!-- Data Model Section -->
+        <section class="about_section">
+            <h2>Logical Data Model</h2>
+            <p>Our application uses a relational database with the following structure showing the relationships between users, restaurants, and reviews:</p>
+            
+            <div class="data_model_container">
+                <svg viewBox="0 0 1000 600" class="data_model_svg">
+                    <!-- Users Table -->
+                    <g id="users-table">
+                        <rect x="50" y="50" width="200" height="200" fill="#e8f4f8" stroke="#2196F3" stroke-width="2" rx="5"/>
+                        <text x="60" y="75" font-size="16" font-weight="bold" fill="#1a1a1a">Users</text>
+                        <line x1="50" y1="85" x2="250" y2="85" stroke="#2196F3" stroke-width="1"/>
+                        
+                        <text x="60" y="110" font-size="13">🔑 UserID (PK)</text>
+                        <text x="60" y="130" font-size="13">Name</text>
+                        <text x="60" y="150" font-size="13">Email</text>
+                        <text x="60" y="170" font-size="13">JoinDate</text>
+                        <text x="60" y="190" font-size="13">PreferredCity</text>
+                        <text x="60" y="210" font-size="13">FavoriteCuisine</text>
+                    </g>
+
+                    <!-- Restaurants Table -->
+                    <g id="restaurants-table">
+                        <rect x="400" y="50" width="200" height="200" fill="#f0f4e8" stroke="#4CAF50" stroke-width="2" rx="5"/>
+                        <text x="410" y="75" font-size="16" font-weight="bold" fill="#1a1a1a">Restaurants</text>
+                        <line x1="400" y1="85" x2="600" y2="85" stroke="#4CAF50" stroke-width="1"/>
+                        
+                        <text x="410" y="110" font-size="13">🔑 RestaurantID (PK)</text>
+                        <text x="410" y="130" font-size="13">Name</text>
+                        <text x="410" y="150" font-size="13">City</text>
+                        <text x="410" y="170" font-size="13">CuisineType</text>
+                        <text x="410" y="190" font-size="13">PriceRange</text>
+                        <text x="410" y="210" font-size="13">Phone</text>
+                    </g>
+
+                    <!-- Reviews Table -->
+                    <g id="reviews-table">
+                        <rect x="750" y="50" width="200" height="220" fill="#f8f0e8" stroke="#FF9800" stroke-width="2" rx="5"/>
+                        <text x="760" y="75" font-size="16" font-weight="bold" fill="#1a1a1a">Reviews</text>
+                        <line x1="750" y1="85" x2="950" y2="85" stroke="#FF9800" stroke-width="1"/>
+                        
+                        <text x="760" y="110" font-size="13">🔑 ReviewID (PK)</text>
+                        <text x="760" y="130" font-size="13">🔗 UserID (FK)</text>
+                        <text x="760" y="150" font-size="13">🔗 RestaurantID (FK)</text>
+                        <text x="760" y="170" font-size="13">Rating</text>
+                        <text x="760" y="190" font-size="13">ReviewText</text>
+                        <text x="760" y="210" font-size="13">VisitDate</text>
+                        <text x="760" y="230" font-size="13">ImageURL</text>
+                    </g>
+
+                    <!-- Relationship Lines -->
+                    <!-- Users to Reviews (One-to-Many) -->
+                    <line x1="250" y1="150" x2="750" y2="150" stroke="#2196F3" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="480" y="140" font-size="12" fill="#2196F3" font-weight="bold">1:M</text>
+                    
+                    <!-- Restaurants to Reviews (One-to-Many) -->
+                    <line x1="600" y1="150" x2="750" y2="150" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="670" y="140" font-size="12" fill="#4CAF50" font-weight="bold">1:M</text>
+
+                    <!-- Legend -->
+                    <g id="legend">
+                        <text x="50" y="400" font-size="14" font-weight="bold" fill="#1a1a1a">Legend:</text>
+                        <text x="50" y="430" font-size="12" fill="#1a1a1a">🔑 PK = Primary Key (Unique identifier for each record)</text>
+                        <text x="50" y="455" font-size="12" fill="#1a1a1a">🔗 FK = Foreign Key (Reference to another table)</text>
+                        <text x="50" y="480" font-size="12" fill="#1a1a1a">1:M = One-to-Many Relationship (One user can have many reviews, one restaurant can have many reviews)</text>
+                    </g>
+
+                    <!-- Relationships Description -->
+                    <g id="description">
+                        <text x="50" y="540" font-size="13" font-weight="bold" fill="#1a1a1a">Key Relationships:</text>
+                        <text x="50" y="565" font-size="12" fill="#333">• Users (1) → Reviews (Many): Each user can write multiple restaurant reviews</text>
+                        <text x="50" y="585" font-size="12" fill="#333">• Restaurants (1) → Reviews (Many): Each restaurant can have multiple reviews from different users</text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!-- GitHub Link -->
+        <section class="about_section">
+            <h2>GitHub Repository</h2>
+            <p>Check out our code on GitHub:</p>
+            <a href="https://github.com/yourusername/My-Tampa-Restaurant-Tracker" class="github_link" target="_blank">
+                <i class="fab fa-github"></i> View Repository on GitHub
+            </a>
+        </section>
+
+        <!-- Technologies Used -->
+        <section class="about_section">
+            <h2>Technologies & Tools</h2>
+            <div class="tech_grid">
+                <div class="tech_item">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="tech_item">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="tech_item">
+                    <i class="fab fa-js"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="tech_item">
+                    <i class="fas fa-chart-bar"></i>
+                    <p>Chart.js</p>
+                </div>
+                <div class="tech_item">
+                    <i class="fas fa-database"></i>
+                    <p>Database Design</p>
+                </div>
+                <div class="tech_item">
+                    <i class="fas fa-robot"></i>
+                    <p>Botpress AI</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <div class="footer_links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="visualizations.html">Visualizations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

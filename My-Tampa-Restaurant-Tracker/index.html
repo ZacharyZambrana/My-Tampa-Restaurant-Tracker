@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Restaurant Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <i class="fas fa-utensils"></i> Restaurant Tracker
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li>
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li>
+                    <a href="read.html" class="navbar_links">View Restaurants</a>
+                </li>
+                <li>
+                    <a href="visualizations.html" class="navbar_links">Visualizations</a>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="mybot.html" class="button">Chat Bot</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero_container">
+            <div class="hero_content">
+                <h1 class="hero_title">My Tampa Restaurant Tracker</h1>
+                <p class="hero_description">Track and explore the amazing restaurants in Tampa that we've visited together. Rate, review, and discover your favorite dining spots!</p>
+                <div class="hero_buttons">
+                    <a href="read.html" class="btn btn_primary">View All Restaurants</a>
+                    <a href="create.html" class="btn btn_secondary">Add a New Restaurant</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Features</h2>
+        <div class="features_grid">
+            <div class="feature_card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Search by City</h3>
+                <p>Filter restaurants by Tampa neighborhoods and districts</p>
+            </div>
+            <div class="feature_card">
+                <i class="fas fa-star"></i>
+                <h3>Ratings</h3>
+                <p>Rate restaurants on a 5-star scale based on your experience</p>
+            </div>
+            <div class="feature_card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Price Range</h3>
+                <p>Track dining prices from budget-friendly to fine dining</p>
+            </div>
+            <div class="feature_card">
+                <i class="fas fa-utensils"></i>
+                <h3>Cuisine Types</h3>
+                <p>Organize by cuisine type: Italian, Asian, Mexican, and more</p>
+            </div>
+            <div class="feature_card">
+                <i class="fas fa-image"></i>
+                <h3>Photos</h3>
+                <p>Add photos of the restaurant or dishes you enjoyed</p>
+            </div>
+            <div class="feature_card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Analytics</h3>
+                <p>View charts and insights about your dining preferences</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRUD Operations Section -->
+    <section class="crud_section">
+        <h2>Manage Your Restaurants</h2>
+        <div class="crud_buttons_container">
+            <a href="create.html" class="crud_btn create_btn">
+                <i class="fas fa-plus"></i>
+                <span>CREATE</span>
+                <p>Add a new restaurant</p>
+            </a>
+            <a href="read.html" class="crud_btn read_btn">
+                <i class="fas fa-eye"></i>
+                <span>READ</span>
+                <p>View all restaurants</p>
+            </a>
+            <a href="update.html" class="crud_btn update_btn">
+                <i class="fas fa-edit"></i>
+                <span>UPDATE</span>
+                <p>Modify restaurant info</p>
+            </a>
+            <a href="delete.html" class="crud_btn delete_btn">
+                <i class="fas fa-trash"></i>
+                <span>DELETE</span>
+                <p>Remove a restaurant</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer_container">
+            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <div class="footer_links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="visualizations.html">Visualizations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

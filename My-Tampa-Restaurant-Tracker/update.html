@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <i class="fas fa-utensils"></i> Restaurant Tracker
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li>
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li>
+                    <a href="read.html" class="navbar_links">View Restaurants</a>
+                </li>
+                <li>
+                    <a href="visualizations.html" class="navbar_links">Visualizations</a>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="mybot.html" class="button">Chat Bot</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page_title">Update Restaurant Information</h1>
+        
+        <div class="form_wrapper">
+            <div class="select_restaurant">
+                <label for="selectRestaurant">Select a Restaurant to Update *</label>
+                <select id="selectRestaurant" class="filter_select">
+                    <option value="">Choose a restaurant</option>
+                    <option value="1">Bricks of Ybor</option>
+                    <option value="2">The Bricks of Ybor - Cuban</option>
+                    <option value="3">Impasto</option>
+                    <option value="4">Salt Block</option>
+                    <option value="5">Cafe Escada</option>
+                </select>
+            </div>
+
+            <form id="updateRestaurantForm" class="restaurant_form">
+                <div class="form_group">
+                    <label for="restaurantName">Restaurant Name *</label>
+                    <input type="text" id="restaurantName" name="restaurantName" required placeholder="Enter restaurant name">
+                </div>
+
+                <div class="form_group">
+                    <label for="city">City *</label>
+                    <select id="city" name="city" required>
+                        <option value="">Select a city</option>
+                        <option value="Downtown Tampa">Downtown Tampa</option>
+                        <option value="Hyde Park">Hyde Park</option>
+                        <option value="South Tampa">South Tampa</option>
+                        <option value="Ybor City">Ybor City</option>
+                        <option value="New Tampa">New Tampa</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label for="cuisineType">Cuisine Type *</label>
+                    <select id="cuisineType" name="cuisineType" required>
+                        <option value="">Select cuisine type</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Asian">Asian</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="American">American</option>
+                        <option value="Mediterranean">Mediterranean</option>
+                        <option value="French">French</option>
+                        <option value="Indian">Indian</option>
+                    </select>
+                </div>
+
+                <div class="form_row">
+                    <div class="form_group">
+                        <label for="rating">Rating (1-5) *</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">Select rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                            <option value="3">⭐⭐⭐ - Good</option>
+                            <option value="2">⭐⭐ - Fair</option>
+                            <option value="1">⭐ - Poor</option>
+                        </select>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="priceRange">Price Range *</label>
+                        <select id="priceRange" name="priceRange" required>
+                            <option value="">Select price range</option>
+                            <option value="$">$ - Budget</option>
+                            <option value="$$">$$ - Moderate</option>
+                            <option value="$$$">$$$ - Expensive</option>
+                            <option value="$$$$">$$$$ - Fine Dining</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form_group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter street address">
+                </div>
+
+                <div class="form_group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(XXX) XXX-XXXX">
+                </div>
+
+                <div class="form_group">
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </div>
+
+                <div class="form_group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" placeholder="Add any notes about your experience..." rows="4"></textarea>
+                </div>
+
+                <div class="form_group">
+                    <label for="imageUrl">Image URL (Restaurant or Food)</label>
+                    <input type="url" id="imageUrl" name="imageUrl" placeholder="https://example.com/image.jpg">
+                </div>
+
+                <div class="form_buttons">
+                    <button type="submit" class="btn btn_primary">
+                        <i class="fas fa-save"></i> Update Restaurant
+                    </button>
+                    <a href="read.html" class="btn btn_secondary">
+                        <i class="fas fa-times"></i> Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="info_box">
+            <h3><i class="fas fa-info-circle"></i> How This Works</h3>
+            <p>Select a restaurant from the dropdown above, and then update any information you'd like to change. In the final dynamic version, these changes would be saved to the database immediately.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <div class="footer_links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="visualizations.html">Visualizations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

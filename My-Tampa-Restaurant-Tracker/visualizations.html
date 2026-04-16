@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <i class="fas fa-utensils"></i> Restaurant Tracker
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li>
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li>
+                    <a href="read.html" class="navbar_links">View Restaurants</a>
+                </li>
+                <li>
+                    <a href="visualizations.html" class="navbar_links">Visualizations</a>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="mybot.html" class="button">Chat Bot</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page_title">Restaurant Analytics & Visualizations</h1>
+        <p class="section_subtitle">Explore insights about our restaurant visits</p>
+
+        <div class="charts_grid">
+            <!-- Chart 1: Restaurants by Rating -->
+            <div class="chart_container">
+                <h2><i class="fas fa-star"></i> Restaurants by Rating</h2>
+                <canvas id="ratingChart"></canvas>
+            </div>
+
+            <!-- Chart 2: Restaurants by Cuisine Type -->
+            <div class="chart_container">
+                <h2><i class="fas fa-utensils"></i> Distribution by Cuisine Type</h2>
+                <canvas id="cuisineChart"></canvas>
+            </div>
+
+            <!-- Chart 3: Price Range Distribution -->
+            <div class="chart_container">
+                <h2><i class="fas fa-dollar-sign"></i> Price Range Distribution</h2>
+                <canvas id="priceChart"></canvas>
+            </div>
+
+            <!-- Chart 4: Restaurants by City -->
+            <div class="chart_container">
+                <h2><i class="fas fa-map-marker-alt"></i> Restaurants by City</h2>
+                <canvas id="cityChart"></canvas>
+            </div>
+
+            <!-- Chart 5: Visit Frequency Over Time -->
+            <div class="chart_container">
+                <h2><i class="fas fa-calendar"></i> Visits Over Time (Last 6 Months)</h2>
+                <canvas id="timeChart"></canvas>
+            </div>
+
+            <!-- Chart 6: Average Rating by Cuisine -->
+            <div class="chart_container">
+                <h2><i class="fas fa-chart-line"></i> Average Rating by Cuisine Type</h2>
+                <canvas id="cuisineRatingChart"></canvas>
+            </div>
+        </div>
+
+        <div class="stats_summary">
+            <h2>Summary Statistics</h2>
+            <div class="stats_grid">
+                <div class="stat_card">
+                    <h3>Total Restaurants</h3>
+                    <p class="stat_number">23</p>
+                </div>
+                <div class="stat_card">
+                    <h3>Average Rating</h3>
+                    <p class="stat_number">4.2</p>
+                    <p class="stat_subtext">out of 5.0</p>
+                </div>
+                <div class="stat_card">
+                    <h3>Favorite City</h3>
+                    <p class="stat_number">Ybor City</p>
+                    <p class="stat_subtext">8 restaurants</p>
+                </div>
+                <div class="stat_card">
+                    <h3>Most Popular Cuisine</h3>
+                    <p class="stat_number">Italian</p>
+                    <p class="stat_subtext">6 restaurants</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <div class="footer_links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="visualizations.html">Visualizations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Chart 1: Restaurants by Rating (Bar Chart)
+        const ratingCtx = document.getElementById('ratingChart').getContext('2d');
+        new Chart(ratingCtx, {
+            type: 'bar',
+            data: {
+                labels: ['⭐', '⭐⭐', '⭐⭐⭐', '⭐⭐⭐⭐', '⭐⭐⭐⭐⭐'],
+                datasets: [{
+                    label: 'Number of Restaurants',
+                    data: [0, 1, 4, 8, 10],
+                    backgroundColor: [
+                        '#ff6b6b',
+                        '#ffa94d',
+                        '#ffd93d',
+                        '#95d5b2',
+                        '#52b788'
+                    ],
+                    borderColor: '#1a1a1a',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 12
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Cuisine Type Distribution (Pie Chart)
+        const cuisineCtx = document.getElementById('cuisineChart').getContext('2d');
+        new Chart(cuisineCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Italian', 'Asian', 'Mexican', 'Mediterranean', 'American', 'French'],
+                datasets: [{
+                    data: [6, 4, 3, 5, 3, 2],
+                    backgroundColor: [
+                        '#ce4c3a',
+                        '#f78c6b',
+                        '#ffa94d',
+                        '#95d5b2',
+                        '#52b788',
+                        '#37b7c3'
+                    ],
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Price Range Distribution (Horizontal Bar)
+        const priceCtx = document.getElementById('priceChart').getContext('2d');
+        new Chart(priceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Budget ($)', 'Moderate ($$)', 'Expensive ($$$)', 'Fine Dining ($$$$)'],
+                datasets: [{
+                    label: 'Number of Restaurants',
+                    data: [5, 10, 6, 2],
+                    backgroundColor: [
+                        '#52b788',
+                        '#95d5b2',
+                        '#f78c6b',
+                        '#ce4c3a'
+                    ],
+                    borderColor: '#1a1a1a',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 12
+                    }
+                }
+            }
+        });
+
+        // Chart 4: Restaurants by City (Bar Chart)
+        const cityCtx = document.getElementById('cityChart').getContext('2d');
+        new Chart(cityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Downtown', 'Hyde Park', 'South Tampa', 'Ybor City', 'New Tampa'],
+                datasets: [{
+                    label: 'Number of Restaurants',
+                    data: [4, 5, 6, 8, 0],
+                    backgroundColor: [
+                        '#ce4c3a',
+                        '#f78c6b',
+                        '#ffa94d',
+                        '#ffd93d',
+                        '#95d5b2'
+                    ],
+                    borderColor: '#1a1a1a',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10
+                    }
+                }
+            }
+        });
+
+        // Chart 5: Visit Frequency Over Time (Line Chart)
+        const timeCtx = document.getElementById('timeChart').getContext('2d');
+        new Chart(timeCtx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Visits',
+                    data: [3, 4, 5, 4, 6, 1],
+                    borderColor: '#ce4c3a',
+                    backgroundColor: 'rgba(206, 76, 58, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#ce4c3a',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 8
+                    }
+                }
+            }
+        });
+
+        // Chart 6: Average Rating by Cuisine (Radar Chart alternative - using bar)
+        const cuisineRatingCtx = document.getElementById('cuisineRatingChart').getContext('2d');
+        new Chart(cuisineRatingCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Italian', 'Asian', 'Mexican', 'Mediterranean', 'American', 'French'],
+                datasets: [{
+                    label: 'Average Rating',
+                    data: [4.5, 4.0, 4.2, 4.1, 4.0, 4.8],
+                    backgroundColor: [
+                        '#ce4c3a',
+                        '#f78c6b',
+                        '#ffa94d',
+                        '#95d5b2',
+                        '#52b788',
+                        '#37b7c3'
+                    ],
+                    borderColor: '#1a1a1a',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 5
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

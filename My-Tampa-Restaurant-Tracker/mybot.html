@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant AI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <i class="fas fa-utensils"></i> Restaurant Tracker
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span> <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li>
+                    <a href="index.html" class="navbar_links">Home</a>
+                </li>
+                <li>
+                    <a href="read.html" class="navbar_links">View Restaurants</a>
+                </li>
+                <li>
+                    <a href="visualizations.html" class="navbar_links">Visualizations</a>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="mybot.html" class="button">Chat Bot</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page_title">
+            <i class="fas fa-robot"></i> Restaurant AI Assistant
+        </h1>
+        
+        <div class="chatbot_wrapper">
+            <div class="chatbot_header">
+                <h2>AI-Powered Restaurant Assistant</h2>
+                <p>Ask me anything about restaurants in our tracker!</p>
+            </div>
+
+            <div class="chatbot_info">
+                <div class="info_section">
+                    <h3><i class="fas fa-sparkles"></i> What I Can Help With</h3>
+                    <ul>
+                        <li>Find restaurants by cuisine type</li>
+                        <li>Search restaurants by city or neighborhood</li>
+                        <li>Get restaurant information (phone, address, website)</li>
+                        <li>View ratings and reviews</li>
+                        <li>Filter by price range</li>
+                        <li>Get dining recommendations</li>
+                    </ul>
+                </div>
+
+                <div class="info_section">
+                    <h3><i class="fas fa-question-circle"></i> Try Asking Me</h3>
+                    <div class="example_questions">
+                        <button class="example_btn" onclick="scrollToChat()">Show example questions</button>
+                    </div>
+                    <div class="examples_list" id="examplesList" style="display: none;">
+                        <p>• "What Italian restaurants do you have?"</p>
+                        <p>• "Find 5-star rated restaurants"</p>
+                        <p>• "Tell me about restaurants in Ybor City"</p>
+                        <p>• "What are budget-friendly restaurants?"</p>
+                        <p>• "Find Mediterranean restaurants with high ratings"</p>
+                        <p>• "Show me all restaurants under $$$"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botpress Embed Will Go Here -->
+            <div class="botpress_container">
+                <div class="embed_placeholder">
+                    <i class="fas fa-comments"></i>
+                    <h3>Chatbot Embed Area</h3>
+                    <p>Your Botpress chatbot will be embedded here.</p>
+                    <p>Instructions to embed your bot:</p>
+                    <ol>
+                        <li>Create and publish your Botpress bot</li>
+                        <li>Copy the embed code from Botpress</li>
+                        <li>Paste the code just before the closing &lt;/body&gt; tag</li>
+                        <li>The chatbot will appear in this container</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="info_section">
+                <h3><i class="fas fa-lightbulb"></i> How to Set Up Your Botpress Bot</h3>
+                <ol class="setup_steps">
+                    <li><strong>Create Botpress Account:</strong> Sign up at https://botpress.com/ using your USF email</li>
+                    <li><strong>Create a Table:</strong> Add your restaurant data with 10+ entries including Name, City, Cuisine, Rating, and Price</li>
+                    <li><strong>Build Knowledge Base:</strong> Create a knowledge base from your restaurant table so the bot can search it</li>
+                    <li><strong>Set Up Workflow:</strong> 
+                        <ul>
+                            <li>Start Node → Autonomous Node</li>
+                            <li>Add instructions like "You are a helpful assistant that answers questions about restaurants"</li>
+                            <li>Enable Knowledge Base search</li>
+                        </ul>
+                    </li>
+                    <li><strong>Test Your Bot:</strong> Ask questions about restaurants to verify it works</li>
+                    <li><strong>Publish & Embed:</strong> Publish your bot and copy the embed code here</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="crud_actions">
+            <a href="index.html" class="btn btn_secondary">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <div class="footer_links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="visualizations.html">Visualizations</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+    BOTPRESS EMBED CODE
+    ===================
+    Paste your Botpress embed code here (the script tag)
+    Example:
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/startup.js"></script>
+    -->
+
+    <script src="script.js"></script>
+    <script>
+        function scrollToChat() {
+            document.getElementById('examplesList').style.display = 'block';
+            document.querySelector('.botpress_container').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

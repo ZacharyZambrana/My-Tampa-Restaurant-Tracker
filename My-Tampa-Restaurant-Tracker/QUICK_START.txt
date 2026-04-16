@@ -1,0 +1,137 @@
+📍 MY TAMPA RESTAURANT TRACKER - QUICK START GUIDE
+
+═══════════════════════════════════════════════════════════════
+
+📁 FOLDER STRUCTURE:
+My-Tampa-Restaurant-Tracker/
+├── 📄 index.html              ✅ Home Page
+├── 📄 read.html               ✅ View Restaurants
+├── 📄 create.html             ✅ Add Restaurant
+├── 📄 update.html             ✅ Update Restaurant
+├── 📄 delete.html             ✅ Delete Restaurant
+├── 📄 visualizations.html     ✅ Charts & Analytics
+├── 📄 about.html              ✅ About Us + Data Model
+├── 📄 mybot.html              ✅ Chatbot Setup
+├── 🎨 styles.css              ✅ Complete Styling
+├── 📝 script.js               ✅ JavaScript Logic
+└── 📋 README.md               ✅ Documentation
+
+═══════════════════════════════════════════════════════════════
+
+🚀 HOW TO USE:
+
+1. OPEN IN BROWSER:
+   - Double-click index.html OR
+   - Right-click → Open with → Live Server
+
+2. NAVIGATE:
+   - Home → All main navigation available in top bar
+   - View Restaurants → Use filters to search
+   - Visualizations → See 6 interactive charts
+   - About → View team info & data model
+   - Chatbot → See Botpress setup instructions
+
+3. INTERACT:
+   - Fill forms to see create/update interface
+   - Filter restaurants to test search
+   - View charts for analytics
+   - Try delete confirmation
+
+═══════════════════════════════════════════════════════════════
+
+📊 ASSIGNMENT REQUIREMENTS CHECKLIST:
+
+✅ Website Design
+   • Domain: Restaurant Tracker ✓
+   • All pages included ✓
+   • Navigation between pages ✓
+   • Professional design foundation ✓
+
+✅ Data Visualization
+   • 6+ Chart.js charts ✓
+   • Meaningful dummy data ✓
+   • Various chart types ✓
+   • Responsive layout ✓
+
+✅ CRUD Operations
+   • Create page with form ✓
+   • Read page with filters ✓
+   • Update page with form ✓
+   • Delete page with confirmation ✓
+
+✅ Logical Data Model
+   • Users table ✓
+   • Restaurants table ✓
+   • Reviews table ✓
+   • 1:M relationships ✓
+   • Primary & Foreign keys ✓
+
+✅ Responsiveness
+   • Mobile (≤480px) ✓
+   • Tablet (481-768px) ✓
+   • Desktop (≥769px) ✓
+
+✅ Botpress Integration
+   • Setup instructions provided ✓
+   • Embed placeholder ready ✓
+   • Example questions included ✓
+
+═══════════════════════════════════════════════════════════════
+
+🔧 BOTPRESS SETUP (For Chatbot Integration):
+
+1. Go to https://botpress.com/
+2. Sign up with USF email (@usf.edu)
+3. Create table with restaurants data (10+ rows)
+4. Build knowledge base from table
+5. Create workflow: Start Node → Autonomous Node
+6. Add instructions: "You are a helpful restaurant assistant..."
+7. Enable "Search Knowledge"
+8. Test your bot with restaurant questions
+9. Publish and copy embed code
+10. Paste code in mybot.html (before </body>)
+
+═══════════════════════════════════════════════════════════════
+
+🎨 DESIGN COLORS:
+
+Primary:     #ce4c3a (Red-Orange)
+Secondary:   #f78c6b (Light Orange)
+Dark:        #1a1a1a (Dark Gray)
+Light:       #f9f9f9 (Light Gray)
+
+═══════════════════════════════════════════════════════════════
+
+📋 SAMPLE DATA INCLUDED:
+
+8 Restaurants:
+1. Bricks of Ybor - Italian - Ybor City - ⭐⭐⭐⭐
+2. Impasto - Italian - South Tampa - ⭐⭐⭐⭐⭐
+3. Salt Block - Mediterranean - Hyde Park - ⭐⭐⭐⭐
+4. Cafe Escada - Mediterranean - Downtown - ⭐⭐⭐
+5. Ceviche Tapas Bar - Spanish - Ybor City - ⭐⭐⭐⭐
+6. Sake Room - Asian - South Tampa - ⭐⭐⭐⭐
+7. El Tipico - Mexican - Ybor City - ⭐⭐⭐⭐
+8. Oysterbox Seafood - American - Hyde Park - ⭐⭐⭐⭐
+
+═══════════════════════════════════════════════════════════════
+
+🔗 IMPORTANT LINKS:
+
+GitHub Repo: Update with your actual GitHub link
+Botpress: https://botpress.com/
+Chart.js Docs: https://www.chartjs.org/
+Font Awesome: https://fontawesome.com/
+
+═══════════════════════════════════════════════════════════════
+
+✨ PROJECT STATUS: COMPLETE ✅
+
+Ready for:
+• Review and grading
+• Backend API integration
+• Database connection
+• User authentication
+• Dynamic functionality
+
+═══════════════════════════════════════════════════════════════
