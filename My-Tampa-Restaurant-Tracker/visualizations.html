@@ -84,22 +84,22 @@
             <div class="stats_grid">
                 <div class="stat_card">
                     <h3>Total Restaurants</h3>
-                    <p class="stat_number">23</p>
+                    <p class="stat_number">10</p>
                 </div>
                 <div class="stat_card">
                     <h3>Average Rating</h3>
-                    <p class="stat_number">4.2</p>
+                    <p class="stat_number">4.3</p>
                     <p class="stat_subtext">out of 5.0</p>
                 </div>
                 <div class="stat_card">
                     <h3>Favorite City</h3>
-                    <p class="stat_number">Ybor City</p>
-                    <p class="stat_subtext">8 restaurants</p>
+                    <p class="stat_number">Tampa</p>
+                    <p class="stat_subtext">6 restaurants</p>
                 </div>
                 <div class="stat_card">
                     <h3>Most Popular Cuisine</h3>
-                    <p class="stat_number">Italian</p>
-                    <p class="stat_subtext">6 restaurants</p>
+                    <p class="stat_number">Multiple</p>
+                    <p class="stat_subtext">Italian, Asian, American</p>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
 
     <footer class="footer">
         <div class="footer_container">
-            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <p>&copy; 2026 My Restaurant Tracker. All rights reserved.</p>
             <div class="footer_links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -233,16 +233,13 @@
         new Chart(cityCtx, {
             type: 'bar',
             data: {
-                labels: ['Downtown', 'Hyde Park', 'South Tampa', 'Ybor City', 'New Tampa'],
+                labels: ['Tampa', 'Miami'],
                 datasets: [{
                     label: 'Number of Restaurants',
-                    data: [4, 5, 6, 8, 0],
+                    data: [6, 4],
                     backgroundColor: [
                         '#ce4c3a',
-                        '#f78c6b',
-                        '#ffa94d',
-                        '#ffd93d',
-                        '#95d5b2'
+                        '#f78c6b'
                     ],
                     borderColor: '#1a1a1a',
                     borderWidth: 1
