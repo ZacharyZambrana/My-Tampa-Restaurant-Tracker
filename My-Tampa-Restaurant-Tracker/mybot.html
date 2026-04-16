@@ -68,7 +68,7 @@
                     <div class="examples_list" id="examplesList" style="display: none;">
                         <p>• "What Italian restaurants do you have?"</p>
                         <p>• "Find 5-star rated restaurants"</p>
-                        <p>• "Tell me about restaurants in Ybor City"</p>
+                        <p>• "Tell me about restaurants in Tampa"</p>
                         <p>• "What are budget-friendly restaurants?"</p>
                         <p>• "Find Mediterranean restaurants with high ratings"</p>
                         <p>• "Show me all restaurants under $$$"</p>
@@ -76,38 +76,13 @@
                 </div>
             </div>
 
-            <!-- Botpress Embed Will Go Here -->
             <div class="botpress_container">
                 <div class="embed_placeholder">
                     <i class="fas fa-comments"></i>
-                    <h3>Chatbot Embed Area</h3>
-                    <p>Your Botpress chatbot will be embedded here.</p>
-                    <p>Instructions to embed your bot:</p>
-                    <ol>
-                        <li>Create and publish your Botpress bot</li>
-                        <li>Copy the embed code from Botpress</li>
-                        <li>Paste the code just before the closing &lt;/body&gt; tag</li>
-                        <li>The chatbot will appear in this container</li>
-                    </ol>
+                    <h3>Chat with the Restaurant Assistant</h3>
+                    <p>The chatbot is embedded, click on the blue icon on the bottom right of the screen. Ask about restaurants, cities, cuisine, ratings, and more.</p>
+                    <p>Use the example questions above if you want a quick way to get started.</p>
                 </div>
-            </div>
-
-            <div class="info_section">
-                <h3><i class="fas fa-lightbulb"></i> How to Set Up Your Botpress Bot</h3>
-                <ol class="setup_steps">
-                    <li><strong>Create Botpress Account:</strong> Sign up at https://botpress.com/ using your USF email</li>
-                    <li><strong>Create a Table:</strong> Add your restaurant data with 10+ entries including Name, City, Cuisine, Rating, and Price</li>
-                    <li><strong>Build Knowledge Base:</strong> Create a knowledge base from your restaurant table so the bot can search it</li>
-                    <li><strong>Set Up Workflow:</strong> 
-                        <ul>
-                            <li>Start Node → Autonomous Node</li>
-                            <li>Add instructions like "You are a helpful assistant that answers questions about restaurants"</li>
-                            <li>Enable Knowledge Base search</li>
-                        </ul>
-                    </li>
-                    <li><strong>Test Your Bot:</strong> Ask questions about restaurants to verify it works</li>
-                    <li><strong>Publish & Embed:</strong> Publish your bot and copy the embed code here</li>
-                </ol>
             </div>
         </div>
 
@@ -120,7 +95,7 @@
 
     <footer class="footer">
         <div class="footer_container">
-            <p>&copy; 2026 My Tampa Restaurant Tracker. All rights reserved.</p>
+            <p>&copy; 2026 My Restaurant Tracker. All rights reserved.</p>
             <div class="footer_links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -129,15 +104,6 @@
         </div>
     </footer>
 
-    <!-- 
-    BOTPRESS EMBED CODE
-    ===================
-    Paste your Botpress embed code here (the script tag)
-    Example:
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script src="https://cdn.botpress.cloud/webchat/v1/startup.js"></script>
-    -->
-
     <script src="script.js"></script>
     <script>
         function scrollToChat() {
@@ -145,5 +111,8 @@
             document.querySelector('.botpress_container').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/16/01/20260416013739-A8UZSDRG.js" defer></script>
 </body>
 </html>
